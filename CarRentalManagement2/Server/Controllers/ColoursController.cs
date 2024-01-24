@@ -35,6 +35,9 @@ namespace CarRentalManagement2.Server.Controllers
 
         public async Task<IActionResult> GetColours()
         {
+            //To be deleted after testing the Global Error Handling
+            //return NotFound();
+
             //Refactored
             //return await _context.Colours.ToListAsync();
             var Colours = await _unitOfWork.Colours.GetAll();
